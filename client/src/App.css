@@ -1,0 +1,99 @@
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.stock {
+  display: grid;
+  box-shadow: 0px 2px 2px hsl(0deg 0% 80%/80%);
+  grid-template-columns: 20% 40% 40%;
+  column-gap: 7px;
+}
+
+.stock-img {
+  display: grid;
+  border-radius: 50px;
+  background-color: hsl(0deg 0% 90%/80%);
+  width: 50px;
+  height: 50px;
+  padding: 3px;
+  margin: 15px;
+  align-content: center;
+}
+
+.stock-name {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 10px;
+}
+
+.symbol-short {
+  color:rgb(62, 60, 60);
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.symbol-long {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 10%;
+
+}
+
+.imgsrc {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.stock-prices {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  row-gap: 10px;
+  padding: 5px;
+}
+
+.stock-current {
+  color:rgb(62, 60, 60);
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stock-change {
+  display: flex;
+  margin-bottom: 10%;
+  justify-content: space-between;
+  padding: 0px 30px 0px 0px;
+}
+
+.stock-current:before {
+  content: '$';
+}
+
+.positive-change,
+.positive-percent {
+  color: green;
+}
+
+.positive-change:before {
+  content: "\2191";
+}
+
+.negative-change,
+.negative-percent {
+  color: red;
+}
+
+.negative-change:before {
+  content: "\2193";
+}
+
+.positive-percent:after,
+.negative-percent:after {
+  content: '%'
+}
